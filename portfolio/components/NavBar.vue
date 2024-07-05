@@ -1,20 +1,22 @@
 <template>
-  <div class="nav">
     <v-app-bar :elevation="2">
-      <NuxtLink to="/vetements">
-        <v-btn variant="plain">
+      <template v-slot:prepend>
+        <v-btn icon="mdi-heart"></v-btn>
+      </template>
+        <v-btn variant="plain" to="/vetements">
           VETEMENTS
         </v-btn>
-      </NuxtLink>
-        
-        <v-btn variant="plain">
+        <v-btn variant="plain" to="/chaussures">
           CHAUSSURES
         </v-btn>
-        <v-btn variant="plain">
+        <v-btn variant="plain" to="/accessoires">
           ACCESSOIRES
         </v-btn>
+        <template v-slot:append>
+        <v-btn icon="mdi-account-outline"></v-btn>
+        <v-btn icon="mdi-cart-outline²"></v-btn>
+      </template>
     </v-app-bar>  
-  </div>
 </template>
 
 <style>
